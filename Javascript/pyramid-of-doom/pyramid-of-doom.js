@@ -1,13 +1,10 @@
 var add = function(x, y) {
     return new Promise((resolve,reject) => {
       var sum = x + y;
-      if (Number.isInteger(sum)) {
         resolve(sum);
-      }
-      else {
         reject(Error("Could not add the two values!"));
-      }
-    });
+     
+});
   };
   
   var subtract = function(x, y) {
@@ -35,6 +32,7 @@ let num_2_2 = parseInt(num_2);
     .then((added) => {
       return subtract(added, 3);
     })
+
     .then((subtracted) => {
       return add(subtracted, 5);
     })
@@ -47,3 +45,4 @@ let num_2_2 = parseInt(num_2);
     .catch((err) => {
       console.log(err);
     });
+  
